@@ -1,0 +1,252 @@
+.sidenav {
+  /* background: var(--white); */
+  background: linear-gradient(180deg, #0d4259 0%, #1a5c79 47.92%, #0c3c51 100%);
+  transition: all 0.5s ease;
+  position: fixed;
+  z-index: 1;
+  width: 5rem;
+  height: 100vh;
+}
+.sidenav-nav {
+  position: relative;
+  list-style: none;
+  /* padding: 0.938rem; */
+  margin: 0 0.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidenav-links {
+  margin-top: 20px;
+}
+
+.logo-container {
+  display: flex;
+  display: none;
+  align-items: center;
+  padding: 0.938rem 0.938rem 0 0.938rem;
+  width: 100%;
+}
+.btn-close {
+  margin-left: auto;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+}
+
+.fa-times {
+  color: var(--bg);
+  font-size: 24px;
+}
+
+.sidenav-collapsed {
+  width: 6.5625rem;
+}
+
+.sidenav-nav-item,
+.sidenav-nav-item-sub {
+  width: 100%;
+}
+
+.sidenav-nav-item {
+  margin-bottom: 8px;
+}
+
+.sidenav-nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  font-size: 12px;
+  color: white;
+  width: 100%;
+  /* border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem; */
+  text-decoration: none;
+  /* padding-left: 10px; */
+  transition: all 0.3s ease;
+}
+
+/* .sidenav-nav-item:hover .sidenav-nav-link {
+  background-color: var(--grey);
+  color: var(--bg);
+  width: 5rem;
+} */
+
+/* .sidenav-link-icon {
+  font-size: 22px;
+  height: 2rem;
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 0.01rem;
+  padding: 0.2rem;
+  text-align: center;
+  vertical-align: bottom;
+  background-color: var(--line);
+  border-radius: 50%;
+} */
+
+.sidenav-link-icon-img {
+  height: 18.16292953491211px;
+  width: 18.500001907348633px;
+  left: 2.33331298828125px;
+  top: 4.6666259765625px;
+  border-radius: 0px;
+}
+
+.tina-icon-img {
+  width: 46px;
+  height: 46px;
+  border-radius: 100%;
+}
+
+.sidenav-link-text {
+  font-size: 10px;
+}
+
+.active {
+  background: rgba(14, 14, 14, 1);
+  opacity: 0.5;
+}
+
+/* .sidenav-nav-item .active .sidenav-link-icon {
+  border: 3px solid var(--orange);
+} */
+
+/* .active .sidenav-link-icon,
+.assets .sidenav-link-text {
+  color: var(--bg);
+  font-weight: bolder;
+} */
+
+.child {
+  padding: 0.138rem;
+  text-decoration: none;
+  color: var(--bg);
+  font-size: 11.5px;
+  position: relative;
+}
+
+.parent:hover {
+  background-color: var(--grey);
+  color: var(--bg);
+  width: 16rem;
+}
+
+.child-li {
+  position: relative;
+  padding: 0;
+  margin-left: 40px;
+}
+
+.parent {
+  display: flex;
+  flex-direction: column;
+  height: 7rem;
+  color: var(--bg);
+  text-decoration: none;
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
+  width: 16rem;
+  transition: all 0.3s ease;
+}
+
+.parent .text:hover {
+  font-weight: bold;
+}
+
+.parent-nav {
+  height: 11rem;
+}
+
+.assets,
+.default {
+  font-weight: bolder;
+}
+
+/* @media (max-width: 700px) {
+  .sidenav {
+    width: 100%;
+    height: 10vh;
+    bottom: 0;
+    left: 0;
+    border-radius: 15px;
+    margin: 0 2px;
+  }
+
+  .sidenav-nav {
+    top: 0;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+  }
+  .parent {
+    display: unset;
+    height: auto;
+    color: var(--bg);
+    text-decoration: none;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+  .parent-nav {
+    position: relative;
+    right: 3px;
+  }
+  .child-li {
+    display: none;
+    position: absolute;
+  }
+  .sidenav-nav-link {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 1rem;
+    margin: 4px 3px;
+
+    max-width: 6rem;
+    width: 100%;
+    height: 8vh;
+  }
+  .sidenav-nav-item .active {
+    background: var(--orange);
+    color: var(--white);
+  }
+  .sidenav-nav-item:hover .sidenav-nav-link {
+    background-color: var(--orange);
+    color: var(--white);
+    width: 6rem;
+  }
+  .active {
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 5px;
+
+    box-shadow: 0px 0px 20px #bb7409 inset;
+  }
+
+  .sidenav-nav-item .active .sidenav-link-icon {
+    border: 0px;
+    color: var(--white);
+  }
+
+  .sidenav-link-icon {
+    background: transparent;
+  }
+  .active .sidenav-link-icon,
+  .assets .sidenav-link-text {
+    color: var(--white);
+    font-weight: bolder;
+  }
+} */
